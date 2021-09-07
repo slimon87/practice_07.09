@@ -1,0 +1,48 @@
+:root{
+  --light-grey: #ddd;
+  --dark-grey: #aaa;
+  --table-radius: 8px;
+}
+table{
+  min-width: 600px;
+  width: 100%;
+  max-width: 1100px;
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: var(--table-radius);
+}
+/* первая ячейка каждой строки тела таблицы */
+tbody>tr>td:first-child{
+  padding-left: 20px;
+  text-align-last: left;
+}
+thead th:first-child{
+  border-top-left-radius: var(--table-radius);
+  background: rgb(110, 110,153);
+}
+thead th:nth-child(2){
+  background-color: rgb(85, 85, 85);
+}
+thead th:nth-child(3){
+  background-color: rgb(72, 72, 110)
+}
+thead th:nth-child(4){
+  background-color: rgb(59,59,87);
+}
+
+tfoot th:first-child{
+  border-bottom-left-radius: var(--table-radius);
+}
+thead th:first-child{
+  border-bottom-right-radius: var(--table-radius);
+  background: rgb(59, 59,82);
+}
+tfoot th:first-child{
+  border-bottom-right-radius: var(--table-radius);
+}
+
+tbody tr:nth-child(odd) td:nth-child(even),
+tbody tr:nth-child(even) td:nth-child(odd),
+tfoot th:nth-child(even){
+  background-color: var(--light-grey);
+}
