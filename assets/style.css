@@ -6,10 +6,16 @@
 table{
   min-width: 600px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
+  margin: 0 auto;
   border-collapse: collapse;
   text-align: center;
   border-radius: var(--table-radius);
+  font-family: sans-serif;
+}
+th,td{
+  vertical-align: middle;
+  padding: 10px 0;
 }
 /* первая ячейка каждой строки тела таблицы */
 tbody>tr>td:first-child{
@@ -19,6 +25,19 @@ tbody>tr>td:first-child{
 thead th:first-child{
   border-top-left-radius: var(--table-radius);
   background: rgb(110, 110,153);
+}
+thead th p:first-child{
+  margin-bottom: 30px;
+}
+thead th p:nth-child(2){
+  margin-top: 30px;
+  font-size: 2em;
+  font-weight: bolder;
+}
+tfood button{
+  padding: 5px 20px;
+  font-size: 0.7em;
+  text-transform: uppercase;
 }
 thead th:nth-child(2){
   background-color: rgb(85, 85, 85);
